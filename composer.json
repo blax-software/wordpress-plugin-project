@@ -5,7 +5,7 @@
     "license": "proprietary",
     "autoload": {
         "psr-4": {
-            "BlaxSoftware\\WordpressPluginProject\\": "app/"
+            "Plugin\\": "app/"
         }
     },
     "authors": [
@@ -16,6 +16,18 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "blax-software/wordpress-plugin-framework": "dev-main"
+        "php": ">=7.4",
+        "blax-software/wordpress-plugin-framework": "dev-main",
+        "symfony/var-dumper": "^6.2"
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "@php setup.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
     }
 }
