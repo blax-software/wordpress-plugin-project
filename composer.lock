@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d486d5ab419ca2403b45011f1b7d7733",
+    "packages": [
+        {
+            "name": "blax-software/wordpress-plugin-framework",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blax-software/wordpress-plugin-framework.git",
+                "reference": "8feac41162fb6aed76b927931f91db47031ebf14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blax-software/wordpress-plugin-framework/zipball/8feac41162fb6aed76b927931f91db47031ebf14",
+                "reference": "8feac41162fb6aed76b927931f91db47031ebf14",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Blax\\Wordpress\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Blax Software",
+                    "email": "office@blax.at"
+                }
+            ],
+            "description": "Structure to build a good wordpress plugin",
+            "support": {
+                "issues": "https://github.com/blax-software/wordpress-plugin-framework/issues",
+                "source": "https://github.com/blax-software/wordpress-plugin-framework/tree/main"
+            },
+            "time": "2023-05-20T08:32:53+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "blax-software/wordpress-plugin-framework": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}

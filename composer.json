@@ -1,0 +1,21 @@
+{
+    "name": "blax-software/wordpress-plugin-project",
+    "description": "A WordPress plugin template to get you started quickly.",
+    "type": "project",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "BlaxSoftware\\WordpressPluginProject\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Blax Software",
+            "email": "office@blax.at"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "blax-software/wordpress-plugin-framework": "dev-main"
+    }
+}
