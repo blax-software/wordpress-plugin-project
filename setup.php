@@ -3,6 +3,9 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+use \Blax\Wordpress\Services\PluginService;
+use \Blax\Wordpress\Services\SetupService;
+
 /*
 |--------------------------------------------------------------------------
 | Sets up the project template to fit individual needs
@@ -10,6 +13,7 @@ require __DIR__ . '/vendor/autoload.php';
 |
 */
 
-new \Blax\Wordpress\Plugin();
+//  change "pluginfile.php" to name of current directory
+SetupService::changeNamespaceOfFile(__FILE__, 'xy');
 
-dd('Hi');
+echo PluginService::getVersion();

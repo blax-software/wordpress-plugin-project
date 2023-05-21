@@ -12,13 +12,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/blax-software/wordpress-plugin-framework.git",
-                "reference": "9c55e574ecc8093200195c12cee34e9fb24b9571"
+                "reference": "c81a57b1ec1dfee914b73876c2b23ad8f69f2360"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blax-software/wordpress-plugin-framework/zipball/9c55e574ecc8093200195c12cee34e9fb24b9571",
-                "reference": "9c55e574ecc8093200195c12cee34e9fb24b9571",
+                "url": "https://api.github.com/repos/blax-software/wordpress-plugin-framework/zipball/c81a57b1ec1dfee914b73876c2b23ad8f69f2360",
+                "reference": "c81a57b1ec1dfee914b73876c2b23ad8f69f2360",
                 "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.1",
+                "symfony/var-dumper": "^6.2"
             },
             "default-branch": true,
             "type": "library",
@@ -39,7 +43,7 @@
                 "issues": "https://github.com/blax-software/wordpress-plugin-framework/issues",
                 "source": "https://github.com/blax-software/wordpress-plugin-framework/tree/main"
             },
-            "time": "2023-05-20T15:39:19+00:00"
+            "time": "2023-05-21T09:27:26+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
