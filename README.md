@@ -1,7 +1,8 @@
-<p style="display:flex; font-size: 2rem; font-weight: bold; align-items: center; justify-content: center; gap: 2rem;">
-    <img src="https://avatars.githubusercontent.com/u/48434066?v=4" height="60">
-    Wordpress Plugin Project
+<p align="center">
+    <a target="_blank"><img src="logo_wordpress-plugin-project.png" width="400">
+    </a>
 </p>
+
 
 ## About
 
