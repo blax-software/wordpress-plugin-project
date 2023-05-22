@@ -1,6 +1,6 @@
 <?php
 
-namespace Blax\PluginTemplate;
+namespace Blax\Plugin\PluginTemplate;
 
 class PluginService
 {

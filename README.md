@@ -1,6 +1,6 @@
 <br>
 <p align="center">
-    <a target="_blank"><img src="logo_wordpress-plugin-project.png" width="400">
+    <a target="_blank"><img src="logo_wordpress-plugin-project.png">
     </a>
 </p>
 
