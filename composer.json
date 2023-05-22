@@ -2,7 +2,7 @@
     "name": "blax-software/wordpress-plugin-project",
     "description": "A WordPress plugin template to get you started quickly.",
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Blax\\Wordpress\\Plugin\\": "app/"
