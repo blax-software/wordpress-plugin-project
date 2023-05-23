@@ -1,13 +1,13 @@
 <?php
 
-namespace Blax\Plugin;
+namespace Plugin\PluginTemplate;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
 /*
  * Plugin Name:         Blax Plugin Template
- * Description:         CSV Importer
- * Version:             0.0.0
+ * Description:         A lot of potential
+ * Version:             0.0.1
  * Author:              Blax Software & Consulting
  * Author URI:          https://www.blax.at
  * Text Domain:         blax-plugin-template

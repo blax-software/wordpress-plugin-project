@@ -1,8 +1,7 @@
 <?php
 
-namespace Blax\Plugin\PluginTemplate;
+namespace Plugin\PluginTemplate\Services;
 
 class PluginService
 {
-    
 }

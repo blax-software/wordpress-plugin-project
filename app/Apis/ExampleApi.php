@@ -1,6 +1,6 @@
 <?php
 
-namespace Blax\Plugin\PluginTemplate;
+namespace Plugin\PluginTemplate\Apis;
 
 class ExampleApi extends \Blax\Wordpress\Extendables\Api
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Blax\CSVFahrten\Database;
+namespace Plugin\PluginTemplate\Databases;
 
 class ExampleDatabase extends \Blax\Wordpress\Extendables\Database
 {
