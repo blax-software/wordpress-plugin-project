@@ -2,12 +2,14 @@
 
 namespace Plugin\PluginTemplate;
 
+use Blax\Wordpress\Services\PluginService;
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 /*
  * Plugin Name:         Blax Plugin Template
  * Description:         A lot of potential
- * Version:             0.0.1
+ * Version:             0.0.0
  * Author:              Blax Software & Consulting
  * Author URI:          https://www.blax.at
  * Text Domain:         blax-plugin-template
@@ -16,9 +18,9 @@ require_once __DIR__ . '/vendor/autoload.php';
  * License:             MIT
  * License URI:         https://opensource.org/licenses/MIT
  * GitHub Plugin URI:   https://github.com/blax-software/wordpress-plugin-project
+ * 
+ * 
  *  
- * 
- * 
  * |--------------------------------------------------------------------------
  * | The pluginfile
  * |--------------------------------------------------------------------------

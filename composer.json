@@ -5,8 +5,11 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Blax\\Wordpress\\Plugin\\": "app/"
-        }
+            "Plugin\\PluginTemplate\\": "app/"
+        },
+        "classmap": [
+            "app/"
+        ]
     },
     "authors": [
         {
