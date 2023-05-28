@@ -2,6 +2,6 @@
 
 namespace Plugin\PluginTemplate\Services;
 
-class PluginService
+class PluginService extends \Blax\Wordpress\Services\PluginService
 {
 }

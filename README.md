@@ -4,7 +4,7 @@
     </a>
 </p>
 
-
+[![Latest Stable Version](http://poser.pugx.org/blax-software/wordpress-plugin-project/v)](https://packagist.org/packages/blax-software/wordpress-plugin-project) [![Total Downloads](http://poser.pugx.org/blax-software/wordpress-plugin-project/downloads)](https://packagist.org/packages/blax-software/wordpress-plugin-project) [![Latest Unstable Version](http://poser.pugx.org/blax-software/wordpress-plugin-project/v/unstable)](https://packagist.org/packages/blax-software/wordpress-plugin-project) [![License](http://poser.pugx.org/blax-software/wordpress-plugin-project/license)](https://packagist.org/packages/blax-software/wordpress-plugin-project)
 
 ## About
 

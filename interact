@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$app = new Application();
+
+// Get all files from app/Commands
+$commands = glob(__DIR__ . '/app/Commands/*.php');
+
+foreach ($commands as $command) {
+    $command = str_replace('.php', '', $command);
+    $command = str_replace(__DIR__ . '/app/Commands/', '', $command);
+    $command = str_replace('/', '\\', $command);
+    $command = 'Plugin\\PluginTemplate\\Commands\\' . $command;
+
+    $app->add(new $command);
+}
+
+
+$app->run();
+
+
+// echo \Plugin\PluginTemplate\Services\PluginService::getPluginClass();
