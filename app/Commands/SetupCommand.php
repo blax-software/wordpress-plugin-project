@@ -3,28 +3,36 @@
 namespace Plugin\PluginTemplate\Commands;
 
 use \Blax\Wordpress\Extendables\Command;
+use Blax\Wordpress\Services\SetupService;
 use Plugin\PluginTemplate\Services\PluginService;
-use Symfony\Component\Console\Formatter\OutputFormatterStyle;
+
 
 class SetupCommand extends Command
 {
-    public static $signature = 'plugin:setup {--no-interaction} {--update]';
+    public static $signature = 'plugin:setup';
     public static $description = 'Sets up the plugin when installing';
 
     public function handle()
     {
         $this->writeln("Setting up plugin");
 
-        // if no interaction, assume yes
-        // if ($this->input->getOption('no-interaction')) {
-        //     $this->input->setOption('update', true);
-        // }
+        PluginService::setPluginMeta(
+            'Plugin Name',
+            $name = $this->ask('What is the plugin visible name?', "Blax Plugin Template")
+        );
 
-        $pluginname = $this->ask("What is the plugin name?", 'Plugin Template');
+        PluginService::setPluginMeta(
+            'Description',
+            $description = $this->ask('What is the plugin description?', "A lot of potential")
+        );
 
-        $this->writeln("Plugin name: {$pluginname}");
+        // namespace
+        $current_namespace = SetupService::getNamespaceOfFile(PluginService::getPluginFile());
+        $namespace = $this->ask('What is the plugin namespace?', $current_namespace);
 
-        // dd(dirname(PluginService::getPluginFile()));
+
+
+
 
         $this->writeln("Done setting up plugin");
 

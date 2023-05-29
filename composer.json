@@ -25,7 +25,7 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "@php interact plugin:setup --no-interaction"
+            "@php interact plugin:setup"
         ]
     },
     "config": {

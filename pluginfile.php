@@ -2,8 +2,6 @@
 
 namespace Plugin\PluginTemplate;
 
-use Blax\Wordpress\Services\PluginService;
-
 require_once __DIR__ . '/vendor/autoload.php';
 
 /*
