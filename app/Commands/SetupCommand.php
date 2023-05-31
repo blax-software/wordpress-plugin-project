@@ -11,7 +11,7 @@ use Plugin\PluginTemplate\Services\PluginService;
 
 class SetupCommand extends Command
 {
-    public static $signature = 'plugin:setup {--name} {--description=} {--namespace}';
+    public static $signature = 'plugin:setup {--name} {--description=} {--namespace} {--text_domain}';
     public static $description = 'Sets up the plugin when installing';
 
     public function handle()
@@ -47,6 +47,23 @@ class SetupCommand extends Command
             );
         }
         // #endregion
+
+        // #region Text Domain
+        $plugin_text_domain = $this->getOption('text_domain');
+
+        if ($plugin_text_domain && strlen($plugin_text_domain) > 1) {
+            $this->write(PHP_EOL . "Plugin text domain is set: ");
+            $this->writelnColor($plugin_text_domain, 'green');
+            PluginService::setPluginMeta('Text Domain', $plugin_text_domain);
+        } else {
+            PluginService::setPluginMeta(
+                'Text Domain',
+                $plugin_text_domain = $this->ask('What is the plugin text domain?', "blax-plugin-template")
+            );
+        }
+        // #endregion
+
+
 
         // #region Plugin Namespace
         $default_namespace = "Plugin\PluginTemplate";
@@ -93,11 +110,21 @@ class SetupCommand extends Command
                 true
             );
         }
-
         // #endregion Plugin Namespace
 
+        // #region Plugin File
+        $new_plugin_file_path = (PluginService::getPluginDir() . '/' . basename(PluginService::getPluginDir()) . '.php');
 
-        $this->writeln("Done setting up plugin");
+        if (file_exists($new_plugin_file_path)) {
+            $this->writelnColor("Plugin file already exists", 'red');
+        } else {
+            rename(PluginService::getPluginFile(), $new_plugin_file_path);
+            $this->writelnColor("Plugin file renamed to " . basename($new_plugin_file_path), 'green');
+        }
+
+        $this->writeln("");
+        $this->writelnColor("Done setting up plugin", 'green');
+        $this->writeln("");
 
         return Command::SUCCESS;
     }
