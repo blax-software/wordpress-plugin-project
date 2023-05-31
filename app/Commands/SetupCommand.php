@@ -4,6 +4,7 @@ namespace Plugin\PluginTemplate\Commands;
 
 use Blax\Wordpress\Extendables\Command;
 use Blax\Wordpress\Services\ComposerService;
+use Blax\Wordpress\Services\MixedService;
 use Blax\Wordpress\Services\SetupService;
 use Plugin\PluginTemplate\Services\PluginService;
 
@@ -68,6 +69,29 @@ class SetupCommand extends Command
         }
 
         ComposerService::setNamespace($to_be_namespace);
+
+        // remove last char if backslash
+        if (substr($current_namespace, -1) === '\\') {
+            $current_namespace = substr($current_namespace, 0, -1);
+        }
+        if (substr($to_be_namespace, -1) === '\\') {
+            $to_be_namespace = substr($to_be_namespace, 0, -1);
+        }
+
+        SetupService::replaceNamespaceOfFile(
+            PluginService::getPluginFile(),
+            $current_namespace,
+            $to_be_namespace
+        );
+
+        foreach (MixedService::getAllFiles(PluginService::getPluginDir() . '/app/') as $key => $absolute_file_path) {
+            SetupService::replaceNamespaceOfFile(
+                $absolute_file_path,
+                $current_namespace,
+                $to_be_namespace
+            );
+        }
+
         // #endregion Plugin Namespace
 
 
