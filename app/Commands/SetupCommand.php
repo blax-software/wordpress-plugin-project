@@ -16,7 +16,16 @@ class SetupCommand extends Command
 
     public function handle()
     {
-        $this->writeln("Setting up plugin");
+        if (basename(PluginService::getPluginFile()) == "pluginfile.php") {
+            $this->writeln("Setting up plugin");
+        } else {
+            if ($this->confirm("Do you want to set up the plugin again?")) {
+                $this->writelnColor("Setting up plugin (again)" . PHP_EOL, 'yellow');
+            } else {
+                $this->writelnColor("Skipping repeated plugin setup" . PHP_EOL, 'yellow');
+                return Command::SUCCESS;
+            }
+        }
 
         // #region Plugin Name
         $plugin_name = $this->getOption('name');

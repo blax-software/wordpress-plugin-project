@@ -4,7 +4,7 @@
     </a>
 </p>
 
-[![Latest Stable Version](http://poser.pugx.org/blax-software/wordpress-plugin-project/v)](https://packagist.org/packages/blax-software/wordpress-plugin-project) [![Total Downloads](http://poser.pugx.org/blax-software/wordpress-plugin-project/downloads)](https://packagist.org/packages/blax-software/wordpress-plugin-project) [![Latest Unstable Version](http://poser.pugx.org/blax-software/wordpress-plugin-project/v/unstable)](https://packagist.org/packages/blax-software/wordpress-plugin-project) [![Latest Stable Version](http://poser.pugx.org/blax-software/wordpress-plugin-project/v/stable)](https://packagist.org/packages/blax-software/wordpress-plugin-project) [![License](http://poser.pugx.org/blax-software/wordpress-plugin-project/license)](https://packagist.org/packages/blax-software/wordpress-plugin-project)
+[![Latest Stable Version](http://poser.pugx.org/blax-software/wordpress-plugin-project/v)](https://packagist.org/packages/blax-software/wordpress-plugin-project) [![Total Downloads](http://poser.pugx.org/blax-software/wordpress-plugin-project/downloads)](https://packagist.org/packages/blax-software/wordpress-plugin-project) [![Latest Unstable Version](http://poser.pugx.org/blax-software/wordpress-plugin-project/v/unstable)](https://packagist.org/packages/blax-software/wordpress-plugin-project) [![License](http://poser.pugx.org/blax-software/wordpress-plugin-project/license)](https://packagist.org/packages/blax-software/wordpress-plugin-project)
 
 ## About
 
@@ -21,7 +21,7 @@ This is a WordPress-Plugin-Project-Template providing essential tools, classes a
     ```shell
     composer create-project blax-software/wordpress-plugin-project my-plugin
     ```
-1. Interact with the setup-script if it is not executed by composer automatically
+1. Composer automatically executes the setup script. If you want to run it manually, execute:
 
     ```shell
     php interact plugin:setup
