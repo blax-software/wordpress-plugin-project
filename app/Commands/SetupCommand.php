@@ -81,14 +81,16 @@ class SetupCommand extends Command
         SetupService::replaceNamespaceOfFile(
             PluginService::getPluginFile(),
             $current_namespace,
-            $to_be_namespace
+            $to_be_namespace,
+            true
         );
 
         foreach (MixedService::getAllFiles(PluginService::getPluginDir() . '/app/') as $key => $absolute_file_path) {
             SetupService::replaceNamespaceOfFile(
                 $absolute_file_path,
                 $current_namespace,
-                $to_be_namespace
+                $to_be_namespace,
+                true
             );
         }
 
