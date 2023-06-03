@@ -1,5 +1,5 @@
 {
-    "explorer.excludeGitIgnore": true,
+    "explorer.excludeGitIgnore": false,
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#fa1b49",
         "activityBar.background": "#fa1b49",

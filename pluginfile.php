@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\PluginTemplate\Example;
+namespace Plugin\PluginTemplate;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
