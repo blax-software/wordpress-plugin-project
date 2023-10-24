@@ -3,6 +3,8 @@
 use Blax\Wordpress\Services\BuildService as bs;
 use Blax\Wordpress\Services\PluginService;
 
+shell_exec('composer dump-autoload');
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 // get current folder name
