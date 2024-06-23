@@ -72,8 +72,6 @@ class SetupCommand extends Command
         }
         // #endregion
 
-
-
         // #region Plugin Namespace
         $default_namespace = "Plugin\PluginTemplate";
         $current_namespace = ComposerService::getNamespace();
@@ -111,6 +109,20 @@ class SetupCommand extends Command
             true
         );
 
+        SetupService::replaceNamespaceOfFile(
+            PluginService::getPluginDir().'/interact',
+            $current_namespace,
+            $to_be_namespace,
+            true
+        );
+
+        SetupService::replaceNamespaceOfFile(
+            PluginService::getPluginDir().'/build.php',
+            $current_namespace,
+            $to_be_namespace,
+            true
+        );
+
         foreach (MixedService::getAllFiles(PluginService::getPluginDir() . '/app/') as $key => $absolute_file_path) {
             SetupService::replaceNamespaceOfFile(
                 $absolute_file_path,
@@ -135,6 +147,29 @@ class SetupCommand extends Command
         $this->writelnColor("Done setting up plugin", 'green');
         $this->writeln("");
 
+        $this->askToSetupGit();
+
         return Command::SUCCESS;
+    }
+
+    public function askToSetupGit() : bool {
+
+        // check if git exists on system
+        $git_exists = shell_exec("which git");
+
+        if (!$git_exists) {
+            return false;
+        }
+
+        if ($this->confirm("Do you want to set up git?")) {
+            $this->writelnColor("Setting up git" . PHP_EOL, 'yellow');
+            shell_exec("git init");
+
+            $this->writelnColor("Git initialized", 'green');
+        } else {
+            $this->writelnColor("Skipping git setup" . PHP_EOL, 'yellow');
+        }
+
+        return true;
     }
 }

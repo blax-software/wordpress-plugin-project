@@ -1,5 +1,7 @@
 <?php
 
+namespace Plugin\PluginTemplate;
+
 use Blax\Wordpress\Services\BuildService as bs;
 use Blax\Wordpress\Services\PluginService;
 

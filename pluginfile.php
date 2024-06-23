@@ -28,6 +28,9 @@ require_once __DIR__ . '/vendor/autoload.php';
  * | override the default behaviour, but do not forget to call the parent
  * | constructor.
  */
+
+defined( 'ABSPATH' ) || exit;
+
 class Plugin extends \Blax\Wordpress\Extendables\Plugin
 {
 }
